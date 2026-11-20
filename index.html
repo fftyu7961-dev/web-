@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen Air — Wireless Earbuds</title>
+  <meta name="description" content="Lumen Air: adaptive noise cancelling, 36 hours of battery, 5.4 g per bud.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-color="midnight">
+
+  <!-- shared gradient for all earbud drawings -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="budGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" class="bud-hi"/>
+        <stop offset="1" class="bud-lo"/>
+      </linearGradient>
+      <symbol id="bud" viewBox="0 0 120 220">
+        <rect x="62" y="70" width="34" height="140" rx="17" fill="url(#budGrad)"/>
+        <ellipse cx="55" cy="62" rx="48" ry="52" fill="url(#budGrad)"/>
+        <ellipse cx="40" cy="46" rx="15" ry="22" fill="#fff" opacity=".16"/>
+        <circle cx="55" cy="66" r="9" fill="#000" opacity=".35"/>
+        <rect x="73" y="150" width="10" height="26" rx="5" fill="#000" opacity=".22"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top"><span class="logo-dot"></span>Lumen Air</a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#anc">Silence</a>
+      <a href="#colors">Colors</a>
+      <a href="#specs">Specs</a>
+    </nav>
+    <a class="btn btn-small" href="#buy">Buy $149</a>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-text">
+        <p class="eyebrow reveal">New · Lumen Air 2</p>
+        <h1 class="hero-title">
+          <span class="line"><span>Hear everything.</span></span>
+          <span class="line"><span class="grad">Nothing else.</span></span>
+        </h1>
+        <p class="hero-sub reveal" style="--d:.5s">Adaptive noise cancelling that listens to the room 4,000 times a second. 36 hours of battery. 5.4 grams a bud.</p>
+        <div class="hero-cta reveal" style="--d:.65s">
+          <a class="btn" href="#buy">Order now</a>
+          <a class="btn btn-ghost" href="#anc">Try the silence</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" id="stage">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <svg class="bud bud-l" viewBox="0 0 120 220"><use href="#bud"/></svg>
+        <svg class="bud bud-r" viewBox="0 0 120 220"><use href="#bud"/></svg>
+        <div class="chip chip-1">ANC · On</div>
+        <div class="chip chip-2">Battery 98%</div>
+      </div>
+
+      <a class="scroll-hint" href="#features" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Adaptive ANC</span><i></i><span>Spatial Audio</span><i></i><span>36h Battery</span><i></i><span>IPX5</span><i></i><span>Multipoint</span><i></i>
+        <span>Adaptive ANC</span><i></i><span>Spatial Audio</span><i></i><span>36h Battery</span><i></i><span>IPX5</span><i></i><span>Multipoint</span><i></i>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow reveal">What's inside</p>
+        <h2 class="reveal">Small on the outside.<br>Serious on the inside.</h2>
+      </div>
+
+      <div class="grid">
+        <article class="card tilt reveal">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><path d="M6 24h4M14 16v16M22 8v32M30 14v20M38 19v10M44 24h-2"/></svg>
+          </div>
+          <h3>Adaptive Noise Cancelling</h3>
+          <p>Six microphones sample the world and cancel up to 48 dB of it before it reaches you.</p>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.1s">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><path d="M24 6a18 18 0 0 1 18 18M24 12a12 12 0 0 1 12 12M24 42a18 18 0 0 1-18-18M24 36a12 12 0 0 1-12-12"/></svg>
+          </div>
+          <h3>Spatial Audio</h3>
+          <p>Head tracking keeps the stage fixed in front of you, even when you turn around.</p>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.2s">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><rect x="6" y="14" width="32" height="20" rx="4"/><path d="M42 21v6M16 20l-4 4h6l-4 4"/></svg>
+          </div>
+          <h3>36 hours of battery</h3>
+          <p>8 hours per charge, 28 more in the case. Ten minutes in the case gives you two hours.</p>
+        </article>
+
+        <article class="card tilt reveal">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><path d="M24 6c8 10 12 16 12 22a12 12 0 0 1-24 0c0-6 4-12 12-22Z"/></svg>
+          </div>
+          <h3>IPX5 sweat proof</h3>
+          <p>Rain, sweat and a rushed jog. Sealed seams and a hydrophobic mesh keep it going.</p>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.1s">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><rect x="17" y="6" width="14" height="22" rx="7"/><path d="M10 24a14 14 0 0 0 28 0M24 38v6M18 44h12"/></svg>
+          </div>
+          <h3>Clear calls</h3>
+          <p>Beamforming mics and a wind filter isolate your voice on a busy street.</p>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.2s">
+          <div class="icon">
+            <svg viewBox="0 0 48 48"><path d="M8 30V18l10-8v28L8 30ZM26 18a8 8 0 0 1 0 12M32 13a15 15 0 0 1 0 22"/></svg>
+          </div>
+          <h3>Multipoint</h3>
+          <p>Connected to your phone and laptop at once. Switches the moment a call comes in.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ANC DEMO -->
+    <section class="section anc" id="anc">
+      <div class="section-head center">
+        <p class="eyebrow reveal">Try it</p>
+        <h2 class="reveal">Switch the world off.</h2>
+        <p class="lead reveal">Tap the button and watch the noise around you drop.</p>
+      </div>
+
+      <div class="anc-panel reveal">
+        <div class="wave" id="wave" aria-hidden="true"></div>
+        <div class="anc-row">
+          <div>
+            <div class="anc-label">Mode</div>
+            <div class="anc-state" id="ancState">Off · Ambient noise</div>
+          </div>
+          <div class="anc-db"><span id="ancDb">72</span><small>dB</small></div>
+          <button class="switch" id="ancSwitch" role="switch" aria-checked="false" aria-label="Noise cancelling"><span></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLORS -->
+    <section class="section colors" id="colors">
+      <div class="colors-stage">
+        <div class="case-wrap" id="caseWrap">
+          <div class="case">
+            <div class="case-lid"></div>
+            <div class="case-base">
+              <svg class="bud mini l" viewBox="0 0 120 220"><use href="#bud"/></svg>
+              <svg class="bud mini r" viewBox="0 0 120 220"><use href="#bud"/></svg>
+              <div class="case-led"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="colors-text">
+        <p class="eyebrow reveal">Finish</p>
+        <h2 class="reveal">Pick yours.</h2>
+        <p class="lead reveal" id="colorName">Midnight — deep, matte, quiet.</p>
+        <div class="swatches reveal" role="radiogroup" aria-label="Color">
+          <button class="sw sw-midnight active" data-color="midnight" role="radio" aria-checked="true" aria-label="Midnight"></button>
+          <button class="sw sw-pearl" data-color="pearl" role="radio" aria-checked="false" aria-label="Pearl"></button>
+          <button class="sw sw-coral" data-color="coral" role="radio" aria-checked="false" aria-label="Coral"></button>
+          <button class="sw sw-sage" data-color="sage" role="radio" aria-checked="false" aria-label="Sage"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="section specs" id="specs">
+      <div class="section-head center">
+        <p class="eyebrow reveal">By the numbers</p>
+        <h2 class="reveal">Built to disappear.</h2>
+      </div>
+      <div class="stats">
+        <div class="stat reveal">
+          <div class="num"><span data-count="36">0</span><small>h</small></div>
+          <p>Total battery with case</p>
+        </div>
+        <div class="stat reveal" style="--d:.1s">
+          <div class="num"><span data-count="48">0</span><small>dB</small></div>
+          <p>Max noise reduction</p>
+        </div>
+        <div class="stat reveal" style="--d:.2s">
+          <div class="num"><span data-count="5.4" data-decimals="1">0</span><small>g</small></div>
+          <p>Weight per bud</p>
+        </div>
+        <div class="stat reveal" style="--d:.3s">
+          <div class="num"><span data-count="6">0</span></div>
+          <p>Microphones</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="buy">
+      <div class="cta-glow"></div>
+      <h2 class="reveal">Meet Lumen Air.</h2>
+      <p class="lead reveal">Free shipping. 30-day returns. 2-year warranty.</p>
+      <div class="price reveal"><span>$149</span><small>or $12.42/mo for 12 months</small></div>
+      <a class="btn btn-big reveal" href="#top">Add to bag</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Lumen Audio. Demo project, not a real product.</span>
+    <span>Privacy · Terms · Support</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
